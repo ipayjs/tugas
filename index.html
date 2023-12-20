@@ -93,7 +93,58 @@ if (lamp == 1) {
         console.log('status air SIAGA 1')
     }
 
+//tugas khusus    
+    let vip = 50;
+        let eksekutif = 50;
+        let ekonomi = 50;
 
+        // vip
+        if (vip >= 35) {
+            untung = 25;
+        }
+        else if (vip >= 20) {
+            untung = 15;
+        }
+        else {
+            untung = 5;
+        }
+
+        // eksekutif
+        if (eksekutif >= 40) {
+            untung2 = 20;
+        }
+        else if (eksekutif >=20){
+           untung2 = 10;
+        }
+        else {
+            untung2 = 2;
+        }
+
+        // ekonomi
+        if (ekonomi > 0) {
+            untung3 = 7;
+        }
+
+        //keuntungan kelas
+        let klsvip = vip * untung;
+        let klseksekutif = eksekutif * untung2;
+        let klsekonomi = ekonomi *untung3;
+
+        //keuntungan full 
+        let keuntunganfull = klsvip + klseksekutif + klsekonomi;
+
+        // total penjualan tiket
+        let totaltiket = vip + eksekutif + ekonomi;
+
+        console.log(`
+        keuntungan kelas per kelas,
+        kelas vip keuntungannya ${klsvip}%,
+        kelas eksekutif keuntunggannya ${klseksekutif}%, 
+        kelas ekonomi keuntungannya ${klsekonomi}%.        
+        keuntungan secara keseluruhan adalah ${keuntunganfull}%.
+        jumlah tiket terjual vip=${vip}, eksekutif=${eksekutif}, ekonomi=${ekonomi}. 
+        penjualan tiket keseluruhan = ${totaltiket} tiket
+        `)
 
         //kg ke g
         let kg = 1;
